@@ -11,7 +11,7 @@ The model learns to rewrite TensorFlow 1.x code (placeholders, `tf.Variable`, `t
 | 1 | `build_dataset.py` | Builds TensorFlow -> PyTorch pairs: 906 train, 100 validation, 94 test. Every reference answer is executed to prove it runs. |
 | 2 | `train.py` | LoRA fine-tune: 16-bit, rank 16, batch size 1, gradient accumulation 4, max sequence length 512, 3 epochs (about 8 minutes). |
 | 3 | `evaluate.py` | Runs the original and the fine-tuned model on the test set and scores both. |
-| 4 | `export_ollama.py` | Merges the LoRA add-on, converts it to GGUF and creates the Ollama model `tf2torch`. See the Ollama note under Version 2. |
+| 4 | `export_ollama.py` | Merges the LoRA add-on, converts it to GGUF, quantises it to Q6_K and creates the Ollama model `tf2torch`. See the Ollama note under Version 2. |
 | extra | `internals_demo.py` | Looks inside the model at the token where an answer goes wrong (next-token probabilities, logit lens, attention). |
 
 `exec_check.py` runs generated code in a separate CPU process and compares its numbers with the reference.
@@ -67,9 +67,28 @@ general rule.
 Ollama: `tf2torch` is now version 2 (`tf2torch:v1` keeps version 1). Ollama 0.40 can no longer import
 the merged safetensors folder on this laptop (it needs the MLX runtime), so `export_ollama.py` now converts
 the merged model to GGUF with llama.cpp's converter and `repack_gguf_for_ollama.py` rearranges it into the
-tensor layout Ollama's runner expects. Checked on all 94 test inputs: the Ollama model gives the same
-answer as the adapter in Transformers on 93. The vision part of the model file is carried over from
+tensor layout Ollama's runner expects. Checked on all 94 test inputs at 16-bit: the Ollama model gives the
+same answer as the adapter in Transformers on 93. The vision part of the model file is carried over from
 version 1 unchanged; the model is meant for text only.
+
+## Quantization experiment
+
+`quant_experiment.py` stores the same version 2 model at seven precisions and runs the 94 test rows
+through each in Ollama (RTX 3050 Ti, everything on the GPU).
+
+| Precision | File | GPU memory | Tokens/s | Runs correctly (of 77) | Same text as 16-bit adapter |
+|---|---|---|---|---|---|
+| F16 | 1732 MB | 1757 MB | 74 | 88% | 99% |
+| Q8_0 | 1027 MB | 1052 MB | 130 | 88% | 96% |
+| Q6_K | 845 MB | 870 MB | 151 | 87% | 95% |
+| Q5_K_M | 796 MB | 821 MB | 156 | 87% | 93% |
+| Q4_K_M | 750 MB | 775 MB | 167 | 87% | 88% |
+| Q3_K_M | 687 MB | 712 MB | 156 | 70% | 70% |
+| Q2_K | 646 MB | 671 MB | 171 | 4% | 2% |
+
+8-bit costs nothing; quality holds to 4-bit, although 4-bit already loses two rows on the trained
+patterns; below 4-bit it collapses. The Ollama model `tf2torch` uses Q6_K. Every file includes the same
+174 MB vision part. In Ollama even F16 scores 88%, against 90% for the adapter in Transformers (one row differs).
 
 ## Limits
 

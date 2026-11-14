@@ -1,0 +1,30 @@
+{
+ "F16": {
+  "file_mb": 1731.793536,
+  "language_part_mb": 1557.660416
+ },
+ "Q8_0": {
+  "file_mb": 1026.892416,
+  "language_part_mb": 833.590016
+ },
+ "Q6_K": {
+  "file_mb": 844.79296,
+  "language_part_mb": 646.538496
+ },
+ "Q5_K_M": {
+  "file_mb": 795.83296,
+  "language_part_mb": 595.419904
+ },
+ "Q4_K_M": {
+  "file_mb": 749.75296,
+  "language_part_mb": 547.308288
+ },
+ "Q3_K_M": {
+  "file_mb": 686.809216,
+  "language_part_mb": 481.403136
+ },
+ "Q2_K": {
+  "file_mb": 646.223488,
+  "language_part_mb": 438.61376
+ }
+}

@@ -12,7 +12,7 @@ settings and tokenizer are kept -- and replace the language model's weights with
     ssm_beta / ssm_alpha            -> first 16 / last 16 rows of ssm_beta_alpha
     ssm_dt                          -> ssm_dt.bias
     vision tower (v.*) and mtp.*    -> kept from the template (not used for text-only translation)
-New weights are stored as 16-bit floats (no quantisation loss).
+The new weights keep whatever precision the new file has (f16, q8_0, q4_k_m, ...).
 
 Usage: python repack_gguf_for_ollama.py TEMPLATE.gguf NEW_UPSTREAM_F16.gguf OUT.gguf
 """
@@ -23,23 +23,26 @@ import gguf
 
 template = gguf.GGUFReader(sys.argv[1])
 new = {t.name: t for t in gguf.GGUFReader(sys.argv[2]).tensors}
-F16, F32 = gguf.GGMLQuantizationType.F16, gguf.GGMLQuantizationType.F32
 
 
 def new_weights(name):
-    """New weights for a template tensor name, or None if the new file has no such weights."""
+    """The new file's tensor for a template tensor name (stored bytes, one row per output row),
+    or None if the new file has no such weights."""
+    def rows(src, lo, hi):
+        t = new[src]
+        return np.array(t.data)[lo:hi], t.tensor_type
     if name in new:
-        return np.array(new[name].data)
+        return np.array(new[name].data), new[name].tensor_type
     if name.endswith(".attn_qkv.weight"):
-        return np.array(new[name.replace("attn_qkv", "attn_qkv_gate")].data)[:6144]
+        return rows(name.replace("attn_qkv", "attn_qkv_gate"), 0, 6144)
     if name.endswith(".attn_gate.weight"):
-        return np.array(new[name.replace("attn_gate", "attn_qkv_gate")].data)[6144:]
+        return rows(name.replace("attn_gate", "attn_qkv_gate"), 6144, 8192)
     if name.endswith(".ssm_beta.weight"):
-        return np.array(new[name.replace("ssm_beta", "ssm_beta_alpha")].data)[:16]
+        return rows(name.replace("ssm_beta", "ssm_beta_alpha"), 0, 16)
     if name.endswith(".ssm_alpha.weight"):
-        return np.array(new[name.replace("ssm_alpha", "ssm_beta_alpha")].data)[16:]
+        return rows(name.replace("ssm_alpha", "ssm_beta_alpha"), 16, 32)
     if name.endswith(".ssm_dt"):
-        return np.array(new[name + ".bias"].data)
+        return np.array(new[name + ".bias"].data), new[name + ".bias"].tensor_type
     return None
 
 
@@ -68,11 +71,12 @@ for t in template.tensors:
         writer.add_tensor_info(t.name, t.data.shape, t.data.dtype, t.data.nbytes, t.tensor_type)
         payload.append(t.data)
         continue
-    if w.shape != shape:
-        sys.exit("%s: new shape %s, template shape %s" % (t.name, w.shape, shape))
-    keep32 = t.tensor_type == F32
-    w = np.ascontiguousarray(w.astype(np.float32 if keep32 else np.float16))
-    writer.add_tensor_info(t.name, shape, w.dtype, w.nbytes, F32 if keep32 else F16)
+    w, w_type = w
+    if w.shape[0] != shape[0]:
+        sys.exit("%s: new tensor has %d rows, template has %d" % (t.name, w.shape[0], shape[0]))
+    w = np.ascontiguousarray(w)
+    # stored bytes are copied as they are, so any quantisation of the new file is kept
+    writer.add_tensor_info(t.name, w.shape, w.dtype, w.nbytes, w_type)
     payload.append(w)
     replaced += 1
 

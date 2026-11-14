@@ -1,0 +1,150 @@
+{
+ "F16": {
+  "model": "tf2torch-f16",
+  "file_mb": 1731.793536,
+  "language_part_mb": 1557.660416,
+  "memory_mb": 1757.025401,
+  "gpu_share": 1.0,
+  "load_s": 2.38442684,
+  "tokens_per_s": 74.48187800033709,
+  "prompt_tokens_per_s": 2351.473500061947,
+  "seconds_per_answer": 0.7414658982703026,
+  "valid": 1.0,
+  "runs": 0.8831168831168831,
+  "n_runnable": 77,
+  "exact": 0.8404255319148937,
+  "same_as_full_precision": 0.9893617021276596,
+  "groups": {
+   "seen_patterns": 1.0,
+   "unseen_patterns": 0.6190476190476191,
+   "real_code": 0.8333333333333334
+  }
+ },
+ "Q8_0": {
+  "model": "tf2torch-q80",
+  "file_mb": 1026.892416,
+  "language_part_mb": 833.590016,
+  "memory_mb": 1052.120185,
+  "gpu_share": 1.0,
+  "load_s": 2.128341474,
+  "tokens_per_s": 129.9045150733342,
+  "prompt_tokens_per_s": 2752.1182813575415,
+  "seconds_per_answer": 0.441806397539504,
+  "valid": 1.0,
+  "runs": 0.8831168831168831,
+  "n_runnable": 77,
+  "exact": 0.8404255319148937,
+  "same_as_full_precision": 0.9574468085106383,
+  "groups": {
+   "seen_patterns": 1.0,
+   "unseen_patterns": 0.6190476190476191,
+   "real_code": 0.8333333333333334
+  }
+ },
+ "Q6_K": {
+  "model": "tf2torch-q6k",
+  "file_mb": 844.79296,
+  "language_part_mb": 646.538496,
+  "memory_mb": 870.024477,
+  "gpu_share": 1.0,
+  "load_s": 2.06916547,
+  "tokens_per_s": 150.89527756004088,
+  "prompt_tokens_per_s": 2721.546570615016,
+  "seconds_per_answer": 0.3872108256563227,
+  "valid": 1.0,
+  "runs": 0.8701298701298701,
+  "n_runnable": 77,
+  "exact": 0.8404255319148937,
+  "same_as_full_precision": 0.9468085106382979,
+  "groups": {
+   "seen_patterns": 1.0,
+   "unseen_patterns": 0.5714285714285714,
+   "real_code": 0.8333333333333334
+  }
+ },
+ "Q5_K_M": {
+  "model": "tf2torch-q5km",
+  "file_mb": 795.83296,
+  "language_part_mb": 595.419904,
+  "memory_mb": 821.066463,
+  "gpu_share": 1.0,
+  "load_s": 2.088876777,
+  "tokens_per_s": 155.82036536109499,
+  "prompt_tokens_per_s": 2772.1959383995963,
+  "seconds_per_answer": 0.378393995000961,
+  "valid": 1.0,
+  "runs": 0.8701298701298701,
+  "n_runnable": 77,
+  "exact": 0.8404255319148937,
+  "same_as_full_precision": 0.925531914893617,
+  "groups": {
+   "seen_patterns": 1.0,
+   "unseen_patterns": 0.5714285714285714,
+   "real_code": 0.8333333333333334
+  }
+ },
+ "Q4_K_M": {
+  "model": "tf2torch-q4km",
+  "file_mb": 749.75296,
+  "language_part_mb": 547.308288,
+  "memory_mb": 774.981548,
+  "gpu_share": 1.0,
+  "load_s": 2.111972808,
+  "tokens_per_s": 167.35761537830373,
+  "prompt_tokens_per_s": 2820.6503463964764,
+  "seconds_per_answer": 0.34681104345524566,
+  "valid": 1.0,
+  "runs": 0.8701298701298701,
+  "n_runnable": 77,
+  "exact": 0.8404255319148937,
+  "same_as_full_precision": 0.8829787234042553,
+  "groups": {
+   "seen_patterns": 0.96,
+   "unseen_patterns": 0.7142857142857143,
+   "real_code": 0.6666666666666666
+  }
+ },
+ "Q3_K_M": {
+  "model": "tf2torch-q3km",
+  "file_mb": 686.809216,
+  "language_part_mb": 481.403136,
+  "memory_mb": 712.035531,
+  "gpu_share": 1.0,
+  "load_s": 2.096960345,
+  "tokens_per_s": 155.61406038408072,
+  "prompt_tokens_per_s": 2695.9971764719453,
+  "seconds_per_answer": 0.38341666028854693,
+  "valid": 1.0,
+  "runs": 0.7012987012987013,
+  "n_runnable": 77,
+  "exact": 0.6063829787234043,
+  "same_as_full_precision": 0.7021276595744681,
+  "groups": {
+   "seen_patterns": 0.76,
+   "unseen_patterns": 0.5714285714285714,
+   "real_code": 0.6666666666666666
+  }
+ },
+ "Q2_K": {
+  "model": "tf2torch-q2k",
+  "file_mb": 646.223488,
+  "language_part_mb": 438.61376,
+  "memory_mb": 671.45564,
+  "gpu_share": 1.0,
+  "load_s": 2.126533865,
+  "tokens_per_s": 170.87966323764874,
+  "aborted": 6,
+  "prompt_tokens_per_s": 2567.646895088321,
+  "seconds_per_answer": 3.109410783077808,
+  "valid": 0.6276595744680851,
+  "runs": 0.03896103896103896,
+  "n_runnable": 77,
+  "exact": 0.010638297872340425,
+  "same_as_full_precision": 0.02127659574468085,
+  "groups": {
+   "seen_patterns": 0.02,
+   "unseen_patterns": 0.09523809523809523,
+   "real_code": 0.0
+  }
+ }
+}
