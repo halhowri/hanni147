@@ -1,0 +1,1978 @@
+{
+ "summary": [
+  {
+   "model": "base",
+   "group": "seen_patterns",
+   "n": 65,
+   "valid": 95.38461538461539,
+   "no_tf": 40.0,
+   "runs": 4.0,
+   "n_runnable": 50,
+   "exact": 0.0,
+   "similarity": 24.035128624059045
+  },
+  {
+   "model": "base",
+   "group": "unseen_patterns",
+   "n": 21,
+   "valid": 95.23809523809524,
+   "no_tf": 61.904761904761905,
+   "runs": 9.523809523809524,
+   "n_runnable": 21,
+   "exact": 0.0,
+   "similarity": 20.13026362085607
+  },
+  {
+   "model": "base",
+   "group": "real_code",
+   "n": 8,
+   "valid": 100.0,
+   "no_tf": 37.5,
+   "runs": 0.0,
+   "n_runnable": 6,
+   "exact": 0.0,
+   "similarity": 16.313822830824368
+  },
+  {
+   "model": "base",
+   "group": "ALL",
+   "n": 94,
+   "valid": 95.74468085106383,
+   "no_tf": 44.680851063829785,
+   "runs": 5.194805194805195,
+   "n_runnable": 77,
+   "exact": 0.0,
+   "similarity": 22.50563275796181
+  },
+  {
+   "model": "tuned",
+   "group": "seen_patterns",
+   "n": 65,
+   "valid": 100.0,
+   "no_tf": 100.0,
+   "runs": 100.0,
+   "n_runnable": 50,
+   "exact": 100.0,
+   "similarity": 100.0
+  },
+  {
+   "model": "tuned",
+   "group": "unseen_patterns",
+   "n": 21,
+   "valid": 100.0,
+   "no_tf": 100.0,
+   "runs": 47.61904761904762,
+   "n_runnable": 21,
+   "exact": 42.857142857142854,
+   "similarity": 84.80232190560004
+  },
+  {
+   "model": "tuned",
+   "group": "real_code",
+   "n": 8,
+   "valid": 100.0,
+   "no_tf": 100.0,
+   "runs": 66.66666666666667,
+   "n_runnable": 6,
+   "exact": 12.5,
+   "similarity": 69.77671727511472
+  },
+  {
+   "model": "tuned",
+   "group": "ALL",
+   "n": 94,
+   "valid": 100.0,
+   "no_tf": 100.0,
+   "runs": 83.11688311688312,
+   "n_runnable": 77,
+   "exact": 79.7872340425532,
+   "similarity": 94.0325797682821
+  }
+ ],
+ "details": {
+  "base": [
+   {
+    "id": "seen_patterns-full_train-0",
+    "group": "seen_patterns",
+    "category": "full_train",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 4.181184668989547,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-full_train-1",
+    "group": "seen_patterns",
+    "category": "full_train",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 4.057017543859649,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-full_train-2",
+    "group": "seen_patterns",
+    "category": "full_train",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 2.2011005502751377,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-full_train-3",
+    "group": "seen_patterns",
+    "category": "full_train",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 9.270774448841152,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-full_train-4",
+    "group": "seen_patterns",
+    "category": "full_train",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 8.647450110864744,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-forward-0",
+    "group": "seen_patterns",
+    "category": "forward",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 4.143646408839778,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-forward-1",
+    "group": "seen_patterns",
+    "category": "forward",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 4.092071611253197,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-forward-2",
+    "group": "seen_patterns",
+    "category": "forward",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 4.26098535286285,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-forward-3",
+    "group": "seen_patterns",
+    "category": "forward",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 33.90607101947308,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-forward-4",
+    "group": "seen_patterns",
+    "category": "forward",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 10.593607305936073,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-math-0",
+    "group": "seen_patterns",
+    "category": "math",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 70.27027027027027,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-math-1",
+    "group": "seen_patterns",
+    "category": "math",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 40.41450777202073,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-math-2",
+    "group": "seen_patterns",
+    "category": "math",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 61.33333333333333,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-math-3",
+    "group": "seen_patterns",
+    "category": "math",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 12.786657400972897,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-math-4",
+    "group": "seen_patterns",
+    "category": "math",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 9.73913043478261,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-variables_np-0",
+    "group": "seen_patterns",
+    "category": "variables_np",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 32.65895953757225,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-variables_np-1",
+    "group": "seen_patterns",
+    "category": "variables_np",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 46.96969696969697,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-variables_np-2",
+    "group": "seen_patterns",
+    "category": "variables_np",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 10.135135135135135,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-variables_np-3",
+    "group": "seen_patterns",
+    "category": "variables_np",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 8.185053380782918,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-variables_np-4",
+    "group": "seen_patterns",
+    "category": "variables_np",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 14.23487544483986,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-variables_init-0",
+    "group": "seen_patterns",
+    "category": "variables_init",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 31.68831168831169,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-variables_init-1",
+    "group": "seen_patterns",
+    "category": "variables_init",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 34.87940630797773,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-variables_init-2",
+    "group": "seen_patterns",
+    "category": "variables_init",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 26.258205689277897,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-variables_init-3",
+    "group": "seen_patterns",
+    "category": "variables_init",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 10.619469026548673,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-variables_init-4",
+    "group": "seen_patterns",
+    "category": "variables_init",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 32.71767810026385,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-loss-0",
+    "group": "seen_patterns",
+    "category": "loss",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 3.4408602150537635,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-loss-1",
+    "group": "seen_patterns",
+    "category": "loss",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 34.10301953818828,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-loss-2",
+    "group": "seen_patterns",
+    "category": "loss",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 12.816188870151771,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-loss-3",
+    "group": "seen_patterns",
+    "category": "loss",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 38.59649122807017,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-loss-4",
+    "group": "seen_patterns",
+    "category": "loss",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 31.538461538461537,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-optimizer-0",
+    "group": "seen_patterns",
+    "category": "optimizer",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 5.408727719729564,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-optimizer-1",
+    "group": "seen_patterns",
+    "category": "optimizer",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 10.634648370497427,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-optimizer-2",
+    "group": "seen_patterns",
+    "category": "optimizer",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 20.30598052851182,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-optimizer-3",
+    "group": "seen_patterns",
+    "category": "optimizer",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 18.807947019867548,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-optimizer-4",
+    "group": "seen_patterns",
+    "category": "optimizer",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 13.043478260869565,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-fetch-0",
+    "group": "seen_patterns",
+    "category": "fetch",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 13.461538461538462,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-fetch-1",
+    "group": "seen_patterns",
+    "category": "fetch",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 6.378986866791744,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-fetch-2",
+    "group": "seen_patterns",
+    "category": "fetch",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 6.185567010309279,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-fetch-3",
+    "group": "seen_patterns",
+    "category": "fetch",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 12.742812742812742,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-fetch-4",
+    "group": "seen_patterns",
+    "category": "fetch",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 15.185185185185185,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-save-0",
+    "group": "seen_patterns",
+    "category": "save",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 5.049396267837541,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-save-1",
+    "group": "seen_patterns",
+    "category": "save",
+    "valid": false,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 3.8066235249333844,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-save-2",
+    "group": "seen_patterns",
+    "category": "save",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 6.0324825986078885,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-save-3",
+    "group": "seen_patterns",
+    "category": "save",
+    "valid": false,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 5.519244734931009,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-save-4",
+    "group": "seen_patterns",
+    "category": "save",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 6.062902614626752,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-add_layer-0",
+    "group": "seen_patterns",
+    "category": "add_layer",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 94.5827232796486,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-add_layer-1",
+    "group": "seen_patterns",
+    "category": "add_layer",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 95.81993569131832,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-add_layer-2",
+    "group": "seen_patterns",
+    "category": "add_layer",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 95.14237855946399,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-add_layer-3",
+    "group": "seen_patterns",
+    "category": "add_layer",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 90.77306733167082,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-add_layer-4",
+    "group": "seen_patterns",
+    "category": "add_layer",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 90.8745247148289,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-dense-0",
+    "group": "seen_patterns",
+    "category": "dense",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 24.26614481409002,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-dense-1",
+    "group": "seen_patterns",
+    "category": "dense",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 40.88669950738916,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-dense-2",
+    "group": "seen_patterns",
+    "category": "dense",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 24.050632911392405,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-dense-3",
+    "group": "seen_patterns",
+    "category": "dense",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 37.6940133037694,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-dense-4",
+    "group": "seen_patterns",
+    "category": "dense",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 20.224719101123593,
+    "runs": false
+   },
+   {
+    "id": "seen_patterns-setup_lines-0",
+    "group": "seen_patterns",
+    "category": "setup_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 24.705882352941178,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-setup_lines-1",
+    "group": "seen_patterns",
+    "category": "setup_lines",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 25.044722719141323,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-setup_lines-2",
+    "group": "seen_patterns",
+    "category": "setup_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 1.5261879986125564,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-setup_lines-3",
+    "group": "seen_patterns",
+    "category": "setup_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 18.040435458786934,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-setup_lines-4",
+    "group": "seen_patterns",
+    "category": "setup_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 39.53488372093023,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-session_lines-0",
+    "group": "seen_patterns",
+    "category": "session_lines",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 11.182795698924732,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-session_lines-1",
+    "group": "seen_patterns",
+    "category": "session_lines",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 11.555555555555555,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-session_lines-2",
+    "group": "seen_patterns",
+    "category": "session_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 5.303030303030303,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-session_lines-3",
+    "group": "seen_patterns",
+    "category": "session_lines",
+    "valid": false,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 2.454473475851148,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-session_lines-4",
+    "group": "seen_patterns",
+    "category": "session_lines",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 11.255411255411255,
+    "runs": null
+   },
+   {
+    "id": "unseen_patterns-two_hidden-0",
+    "group": "unseen_patterns",
+    "category": "two_hidden",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 0.5700035625222657,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-two_hidden-1",
+    "group": "unseen_patterns",
+    "category": "two_hidden",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 1.3181019332161688,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-two_hidden-2",
+    "group": "unseen_patterns",
+    "category": "two_hidden",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 1.4814814814814816,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-two_hidden-3",
+    "group": "unseen_patterns",
+    "category": "two_hidden",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 3.557617942768755,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-two_hidden-4",
+    "group": "unseen_patterns",
+    "category": "two_hidden",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 1.9590382902938557,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-two_hidden-5",
+    "group": "unseen_patterns",
+    "category": "two_hidden",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 3.766478342749529,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-dropout-0",
+    "group": "unseen_patterns",
+    "category": "dropout",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 11.497730711043873,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-dropout-1",
+    "group": "unseen_patterns",
+    "category": "dropout",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 11.497730711043873,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-dropout-2",
+    "group": "unseen_patterns",
+    "category": "dropout",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 11.497730711043873,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-l2-0",
+    "group": "unseen_patterns",
+    "category": "l2",
+    "valid": false,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 7.5139888089528375,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-l2-1",
+    "group": "unseen_patterns",
+    "category": "l2",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 34.0956340956341,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-l2-2",
+    "group": "unseen_patterns",
+    "category": "l2",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 11.242603550295858,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-xent-0",
+    "group": "unseen_patterns",
+    "category": "xent",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 13.846153846153847,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-misc-0",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 58.82352941176471,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-misc-1",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 12.698412698412698,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-misc-2",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 80.0,
+    "runs": true
+   },
+   {
+    "id": "unseen_patterns-misc-3",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 5.725971370143149,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-misc-4",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 11.971830985915492,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-misc-5",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 22.22222222222222,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-misc-6",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 82.66666666666667,
+    "runs": true
+   },
+   {
+    "id": "unseen_patterns-misc-7",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 34.78260869565217,
+    "runs": false
+   },
+   {
+    "id": "real_code-real-0",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 4.175222450376454,
+    "runs": null
+   },
+   {
+    "id": "real_code-real-1",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 93.37175792507205,
+    "runs": false
+   },
+   {
+    "id": "real_code-real-2",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 2.851782363977486,
+    "runs": false
+   },
+   {
+    "id": "real_code-real-3",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 2.3379383634431457,
+    "runs": false
+   },
+   {
+    "id": "real_code-real-4",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 4.066647839593336,
+    "runs": false
+   },
+   {
+    "id": "real_code-real-5",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 4.662226450999048,
+    "runs": null
+   },
+   {
+    "id": "real_code-real-6",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 18.020679468242246,
+    "runs": false
+   },
+   {
+    "id": "real_code-real-7",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": false,
+    "exact": false,
+    "similarity": 1.0243277848911652,
+    "runs": false
+   }
+  ],
+  "tuned": [
+   {
+    "id": "seen_patterns-full_train-0",
+    "group": "seen_patterns",
+    "category": "full_train",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-full_train-1",
+    "group": "seen_patterns",
+    "category": "full_train",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-full_train-2",
+    "group": "seen_patterns",
+    "category": "full_train",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-full_train-3",
+    "group": "seen_patterns",
+    "category": "full_train",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-full_train-4",
+    "group": "seen_patterns",
+    "category": "full_train",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-forward-0",
+    "group": "seen_patterns",
+    "category": "forward",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-forward-1",
+    "group": "seen_patterns",
+    "category": "forward",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-forward-2",
+    "group": "seen_patterns",
+    "category": "forward",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-forward-3",
+    "group": "seen_patterns",
+    "category": "forward",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-forward-4",
+    "group": "seen_patterns",
+    "category": "forward",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-math-0",
+    "group": "seen_patterns",
+    "category": "math",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-math-1",
+    "group": "seen_patterns",
+    "category": "math",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-math-2",
+    "group": "seen_patterns",
+    "category": "math",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-math-3",
+    "group": "seen_patterns",
+    "category": "math",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-math-4",
+    "group": "seen_patterns",
+    "category": "math",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-variables_np-0",
+    "group": "seen_patterns",
+    "category": "variables_np",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-variables_np-1",
+    "group": "seen_patterns",
+    "category": "variables_np",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-variables_np-2",
+    "group": "seen_patterns",
+    "category": "variables_np",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-variables_np-3",
+    "group": "seen_patterns",
+    "category": "variables_np",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-variables_np-4",
+    "group": "seen_patterns",
+    "category": "variables_np",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-variables_init-0",
+    "group": "seen_patterns",
+    "category": "variables_init",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-variables_init-1",
+    "group": "seen_patterns",
+    "category": "variables_init",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-variables_init-2",
+    "group": "seen_patterns",
+    "category": "variables_init",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-variables_init-3",
+    "group": "seen_patterns",
+    "category": "variables_init",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-variables_init-4",
+    "group": "seen_patterns",
+    "category": "variables_init",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-loss-0",
+    "group": "seen_patterns",
+    "category": "loss",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-loss-1",
+    "group": "seen_patterns",
+    "category": "loss",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-loss-2",
+    "group": "seen_patterns",
+    "category": "loss",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-loss-3",
+    "group": "seen_patterns",
+    "category": "loss",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-loss-4",
+    "group": "seen_patterns",
+    "category": "loss",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-optimizer-0",
+    "group": "seen_patterns",
+    "category": "optimizer",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-optimizer-1",
+    "group": "seen_patterns",
+    "category": "optimizer",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-optimizer-2",
+    "group": "seen_patterns",
+    "category": "optimizer",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-optimizer-3",
+    "group": "seen_patterns",
+    "category": "optimizer",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-optimizer-4",
+    "group": "seen_patterns",
+    "category": "optimizer",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-fetch-0",
+    "group": "seen_patterns",
+    "category": "fetch",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-fetch-1",
+    "group": "seen_patterns",
+    "category": "fetch",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-fetch-2",
+    "group": "seen_patterns",
+    "category": "fetch",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-fetch-3",
+    "group": "seen_patterns",
+    "category": "fetch",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-fetch-4",
+    "group": "seen_patterns",
+    "category": "fetch",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-save-0",
+    "group": "seen_patterns",
+    "category": "save",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-save-1",
+    "group": "seen_patterns",
+    "category": "save",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-save-2",
+    "group": "seen_patterns",
+    "category": "save",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-save-3",
+    "group": "seen_patterns",
+    "category": "save",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-save-4",
+    "group": "seen_patterns",
+    "category": "save",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-add_layer-0",
+    "group": "seen_patterns",
+    "category": "add_layer",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-add_layer-1",
+    "group": "seen_patterns",
+    "category": "add_layer",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-add_layer-2",
+    "group": "seen_patterns",
+    "category": "add_layer",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-add_layer-3",
+    "group": "seen_patterns",
+    "category": "add_layer",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-add_layer-4",
+    "group": "seen_patterns",
+    "category": "add_layer",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-dense-0",
+    "group": "seen_patterns",
+    "category": "dense",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-dense-1",
+    "group": "seen_patterns",
+    "category": "dense",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-dense-2",
+    "group": "seen_patterns",
+    "category": "dense",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-dense-3",
+    "group": "seen_patterns",
+    "category": "dense",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-dense-4",
+    "group": "seen_patterns",
+    "category": "dense",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "seen_patterns-setup_lines-0",
+    "group": "seen_patterns",
+    "category": "setup_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-setup_lines-1",
+    "group": "seen_patterns",
+    "category": "setup_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-setup_lines-2",
+    "group": "seen_patterns",
+    "category": "setup_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-setup_lines-3",
+    "group": "seen_patterns",
+    "category": "setup_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-setup_lines-4",
+    "group": "seen_patterns",
+    "category": "setup_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-session_lines-0",
+    "group": "seen_patterns",
+    "category": "session_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-session_lines-1",
+    "group": "seen_patterns",
+    "category": "session_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-session_lines-2",
+    "group": "seen_patterns",
+    "category": "session_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-session_lines-3",
+    "group": "seen_patterns",
+    "category": "session_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "seen_patterns-session_lines-4",
+    "group": "seen_patterns",
+    "category": "session_lines",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": null
+   },
+   {
+    "id": "unseen_patterns-two_hidden-0",
+    "group": "unseen_patterns",
+    "category": "two_hidden",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "unseen_patterns-two_hidden-1",
+    "group": "unseen_patterns",
+    "category": "two_hidden",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "unseen_patterns-two_hidden-2",
+    "group": "unseen_patterns",
+    "category": "two_hidden",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "unseen_patterns-two_hidden-3",
+    "group": "unseen_patterns",
+    "category": "two_hidden",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "unseen_patterns-two_hidden-4",
+    "group": "unseen_patterns",
+    "category": "two_hidden",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "unseen_patterns-two_hidden-5",
+    "group": "unseen_patterns",
+    "category": "two_hidden",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "unseen_patterns-dropout-0",
+    "group": "unseen_patterns",
+    "category": "dropout",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 85.54216867469879,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-dropout-1",
+    "group": "unseen_patterns",
+    "category": "dropout",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 86.74698795180723,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-dropout-2",
+    "group": "unseen_patterns",
+    "category": "dropout",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 85.54216867469879,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-l2-0",
+    "group": "unseen_patterns",
+    "category": "l2",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 71.42857142857143,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-l2-1",
+    "group": "unseen_patterns",
+    "category": "l2",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 70.96774193548387,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-l2-2",
+    "group": "unseen_patterns",
+    "category": "l2",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 71.2,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-xent-0",
+    "group": "unseen_patterns",
+    "category": "xent",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 77.04918032786885,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-misc-0",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 69.44444444444444,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-misc-1",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 47.05882352941176,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-misc-2",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 98.0392156862745,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-misc-3",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 66.66666666666666,
+    "runs": false
+   },
+   {
+    "id": "unseen_patterns-misc-4",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "unseen_patterns-misc-5",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 51.162790697674424,
+    "runs": true
+   },
+   {
+    "id": "unseen_patterns-misc-6",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "unseen_patterns-misc-7",
+    "group": "unseen_patterns",
+    "category": "misc",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "real_code-real-0",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 82.98755186721992,
+    "runs": null
+   },
+   {
+    "id": "real_code-real-1",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 98.32572298325722,
+    "runs": true
+   },
+   {
+    "id": "real_code-real-2",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 99.70414201183432,
+    "runs": true
+   },
+   {
+    "id": "real_code-real-3",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 59.75103734439834,
+    "runs": true
+   },
+   {
+    "id": "real_code-real-4",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 25.222929936305732,
+    "runs": false
+   },
+   {
+    "id": "real_code-real-5",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 15.946843853820598,
+    "runs": null
+   },
+   {
+    "id": "real_code-real-6",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": true,
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
+   },
+   {
+    "id": "real_code-real-7",
+    "group": "real_code",
+    "category": "real",
+    "valid": true,
+    "no_tf": true,
+    "exact": false,
+    "similarity": 76.27551020408163,
+    "runs": false
+   }
+  ]
+ }
+}

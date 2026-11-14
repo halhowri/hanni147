@@ -1,0 +1,8 @@
+FROM /home/halhowri/qwen_finetune/llm_finetune/outputs/merged
+TEMPLATE {{ .Prompt }}
+RENDERER qwen3.5
+PARSER qwen3.5
+SYSTEM """You convert TensorFlow 1.x code to PyTorch. Keep the same variable names. Reply with only the PyTorch code."""
+PARAMETER temperature 0
+PARAMETER repeat_penalty 1
+PARAMETER num_ctx 2048
