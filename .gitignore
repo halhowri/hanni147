@@ -5,3 +5,4 @@ __pycache__/
 unsloth_compiled_cache/
 *.gguf
 data/
+outputs/answers_*.json
