@@ -3,3 +3,4 @@ outputs/checkpoints/
 outputs/*.log
 __pycache__/
 unsloth_compiled_cache/
+*.gguf

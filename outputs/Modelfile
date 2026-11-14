@@ -1,4 +1,4 @@
-FROM /home/halhowri/qwen_finetune/llm_finetune/outputs/merged
+FROM /home/halhowri/qwen_finetune/llm_finetune/outputs/tf2torch.gguf
 TEMPLATE {{ .Prompt }}
 RENDERER qwen3.5
 PARSER qwen3.5

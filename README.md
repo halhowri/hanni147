@@ -11,7 +11,7 @@ The model learns to rewrite TensorFlow 1.x code (placeholders, `tf.Variable`, `t
 | 1 | `build_dataset.py` | Builds TensorFlow -> PyTorch pairs: 906 train, 100 validation, 94 test. Every reference answer is executed to prove it runs. |
 | 2 | `train.py` | LoRA fine-tune: 16-bit, rank 16, batch size 1, gradient accumulation 4, max sequence length 512, 3 epochs (about 8 minutes). |
 | 3 | `evaluate.py` | Runs the original and the fine-tuned model on the test set and scores both. |
-| 4 | `export_ollama.py` | Merges the LoRA add-on, quantises to q4_K_M and creates the Ollama model `tf2torch`. Worked with Ollama 0.23; see the note under Version 2. |
+| 4 | `export_ollama.py` | Merges the LoRA add-on, converts it to GGUF and creates the Ollama model `tf2torch`. See the Ollama note under Version 2. |
 | extra | `internals_demo.py` | Looks inside the model at the token where an answer goes wrong (next-token probabilities, logit lens, attention). |
 
 `exec_check.py` runs generated code in a separate CPU process and compares its numbers with the reference.
@@ -64,9 +64,12 @@ No row that version 1 got right is wrong in version 2. After retraining, the cor
 the same position. The L2 and cross-entropy rows show the model learned the renames it was shown, not a
 general rule.
 
-Ollama: the model `tf2torch` was created from version 1 with Ollama 0.23. With Ollama 0.40,
-`ollama create` from a safetensors folder needs the MLX runtime, which is not available on this Linux
-laptop, so `export_ollama.py` fails there and the Ollama model has not been rebuilt from version 2.
+Ollama: `tf2torch` is now version 2 (`tf2torch:v1` keeps version 1). Ollama 0.40 can no longer import
+the merged safetensors folder on this laptop (it needs the MLX runtime), so `export_ollama.py` now converts
+the merged model to GGUF with llama.cpp's converter and `repack_gguf_for_ollama.py` rearranges it into the
+tensor layout Ollama's runner expects. Checked on all 94 test inputs: the Ollama model gives the same
+answer as the adapter in Transformers on 93. The vision part of the model file is carried over from
+version 1 unchanged; the model is meant for text only.
 
 ## Limits
 
