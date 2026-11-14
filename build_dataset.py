@@ -421,6 +421,74 @@ TRAIN_TEMPLATES = [(t_full_train, 190), (t_forward, 100), (t_math, 150), (t_vari
                    (t_add_layer, 24), (t_dense, 40), (t_setup_lines, 40), (t_session_lines, 12)]
 
 
+# ------------------------------------------------------------------------------------------
+# ADDED after looking inside the model (internals_demo.py): version 1 wrote
+#     tf.nn.dropout(l1, keep_prob=0.9)  ->  torch.dropout(l1, keep_prob=0.9)
+# because almost every training pair kept the function name ("tf.X -> torch.X"). These extra
+# training pairs are cases where the PyTorch NAME (and sometimes the argument) must change.
+# They are added to the training pool only, AFTER the test set is drawn, so the test set is
+# exactly the same as in version 1. Dropout is no longer an "unseen pattern": the test rows
+# use keep_prob 0.5 / 0.8 / 0.9, which are never used here. l2_loss and
+# softmax_cross_entropy stay out of training on purpose.
+# ------------------------------------------------------------------------------------------
+def t_dropout_train():
+    h = pick(HID)
+    keep = pick([0.55, 0.6, 0.65, 0.7, 0.75, 0.85, 0.95])
+    p = round(1 - keep, 2)
+    arg_tf = pick([f"keep_prob={keep}", f"keep_prob={keep}", f"rate={p}"])
+    setup = (f"{h} = torch.tensor(rs.rand(6, 8), dtype=torch.float32)\n"
+             "xs = torch.tensor(rs.rand(6, 4), dtype=torch.float32)\n"
+             "x = xs\ninputs = xs\n"
+             "W1 = torch.tensor(rs.rand(4, 8), dtype=torch.float32)\nWeights_1 = W1\n"
+             "b1 = torch.tensor(rs.rand(1, 8), dtype=torch.float32)\nbiases_1 = b1\n")
+    if pick([True, False]):
+        X, (W, b) = pick(["xs", "x", "inputs"]), pick([("W1", "b1"), ("Weights_1", "biases_1")])
+        atf, apt = pick([("tf.nn.tanh", "torch.tanh"), ("tf.nn.sigmoid", "torch.sigmoid"), ("tf.nn.relu", "torch.relu")])
+        if atf == "tf.nn.relu" and h == "l1" and X == "xs" and W == "W1":
+            h = "hidden"                       # keep clear of the exact wording of the test rows
+        return dict(tf=f"{h} = {atf}(tf.matmul({X}, {W}) + {b})\n{h} = tf.nn.dropout({h}, {arg_tf})",
+                    pt=f"{h} = {apt}(torch.matmul({X}, {W}) + {b})\n{h} = torch.nn.functional.dropout({h}, p={p})",
+                    setup=setup, outs=[h], mode="shape")
+    out = pick(["dropped", "h_drop", h])
+    return dict(tf=f"{out} = tf.nn.dropout({h}, {arg_tf})",
+                pt=f"{out} = torch.nn.functional.dropout({h}, p={p})", setup=setup, outs=[out], mode="shape")
+
+
+RENAME = [   # TensorFlow name -> a DIFFERENT PyTorch name
+    ("tf.nn.leaky_relu({a}, alpha=0.2)", "torch.nn.functional.leaky_relu({a}, negative_slope=0.2)"),
+    ("tf.nn.elu({a})", "torch.nn.functional.elu({a})"),
+    ("tf.nn.softplus({a})", "torch.nn.functional.softplus({a})"),
+    ("tf.nn.log_softmax({a}, axis=1)", "torch.log_softmax({a}, dim=1)"),
+    ("tf.nn.l2_normalize({a}, axis=1)", "torch.nn.functional.normalize({a}, dim=1)"),
+    ("tf.nn.bias_add({a}, {v})", "{a} + {v}"),
+    ("tf.reduce_prod({a}, axis={k})", "torch.prod({a}, dim={k})"),
+    ("tf.math.reduce_variance({a})", "torch.var({a}, unbiased=False)"),
+    ("tf.math.log1p({a})", "torch.log1p({a})"),
+    ("tf.nn.relu6({a})", "torch.nn.functional.relu6({a})"),
+]
+
+
+def t_rename():
+    a, c = pick([("a", "c"), ("t1", "t2"), ("u", "w"), ("p", "q")])
+    base = pick(["r", "out", "z", "val"])
+    setup = (f"{a} = torch.tensor(rs.rand(4, 5), dtype=torch.float32)\n"
+             f"{c} = torch.tensor(rs.rand(4, 5), dtype=torch.float32)\n"
+             "v = torch.tensor(rs.rand(5), dtype=torch.float32)\n")
+    forms = rng.sample(RENAME, rng.randint(1, 2)) + rng.sample(MATH[:6], rng.randint(0, 1))
+    rng.shuffle(forms)
+    tf_l, pt_l, outs = [], [], []
+    for i, (ft, fp) in enumerate(forms, 1):
+        kw = dict(a=pick([a, c]), c=c, b="v", v="v", k=pick([0, 1]), k2=2)
+        if "matmul" in ft:
+            continue
+        tf_l.append(f"{base}{i} = {ft.format(**kw)}")
+        pt_l.append(f"{base}{i} = {fp.format(**kw)}")
+        outs.append(f"{base}{i}")
+    return dict(tf="\n".join(tf_l), pt="\n".join(pt_l), setup=setup, outs=outs)
+
+
+EXTRA_TRAIN_TEMPLATES = [(t_dropout_train, 50), (t_rename, 70)]
+
 # ------------------------------------- patterns that training NEVER sees
 def h_two_hidden():
     X, xd = "xs", "x_data"
@@ -611,6 +679,7 @@ def main():
     test += [finish({k: v for k, v in r.items() if k != "name"} | {"name": r["name"]}, "real", "real_code", i)
              for i, r in enumerate(REAL)]
     pool = generate(TRAIN_TEMPLATES, "train", seen)
+    pool += generate(EXTRA_TRAIN_TEMPLATES, "train", seen)      # added in version 2
 
     # Drop training examples that do not fit in the 512-token window.
     from transformers import AutoTokenizer

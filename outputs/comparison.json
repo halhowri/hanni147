@@ -61,10 +61,10 @@
    "n": 21,
    "valid": 100.0,
    "no_tf": 100.0,
-   "runs": 47.61904761904762,
+   "runs": 66.66666666666667,
    "n_runnable": 21,
-   "exact": 42.857142857142854,
-   "similarity": 84.80232190560004
+   "exact": 57.142857142857146,
+   "similarity": 86.96225796039141
   },
   {
    "model": "tuned",
@@ -72,10 +72,10 @@
    "n": 8,
    "valid": 100.0,
    "no_tf": 100.0,
-   "runs": 66.66666666666667,
+   "runs": 83.33333333333333,
    "n_runnable": 6,
-   "exact": 12.5,
-   "similarity": 69.77671727511472
+   "exact": 25.0,
+   "similarity": 77.92481287849178
   },
   {
    "model": "tuned",
@@ -83,10 +83,10 @@
    "n": 94,
    "valid": 100.0,
    "no_tf": 100.0,
-   "runs": 83.11688311688312,
+   "runs": 89.6103896103896,
    "n_runnable": 77,
-   "exact": 79.7872340425532,
-   "similarity": 94.0325797682821
+   "exact": 84.04255319148936,
+   "similarity": 95.20857361910802
   }
  ],
  "details": {
@@ -1749,9 +1749,9 @@
     "category": "dropout",
     "valid": true,
     "no_tf": true,
-    "exact": false,
-    "similarity": 85.54216867469879,
-    "runs": false
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
    },
    {
     "id": "unseen_patterns-dropout-1",
@@ -1759,9 +1759,9 @@
     "category": "dropout",
     "valid": true,
     "no_tf": true,
-    "exact": false,
-    "similarity": 86.74698795180723,
-    "runs": false
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
    },
    {
     "id": "unseen_patterns-dropout-2",
@@ -1769,9 +1769,9 @@
     "category": "dropout",
     "valid": true,
     "no_tf": true,
-    "exact": false,
-    "similarity": 85.54216867469879,
-    "runs": false
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
    },
    {
     "id": "unseen_patterns-l2-0",
@@ -1780,7 +1780,7 @@
     "valid": true,
     "no_tf": true,
     "exact": false,
-    "similarity": 71.42857142857143,
+    "similarity": 70.39999999999999,
     "runs": false
    },
    {
@@ -1790,7 +1790,7 @@
     "valid": true,
     "no_tf": true,
     "exact": false,
-    "similarity": 70.96774193548387,
+    "similarity": 69.91869918699187,
     "runs": false
    },
    {
@@ -1800,7 +1800,7 @@
     "valid": true,
     "no_tf": true,
     "exact": false,
-    "similarity": 71.2,
+    "similarity": 70.16129032258065,
     "runs": false
    },
    {
@@ -1849,9 +1849,9 @@
     "category": "misc",
     "valid": true,
     "no_tf": true,
-    "exact": false,
-    "similarity": 66.66666666666666,
-    "runs": false
+    "exact": true,
+    "similarity": 100.0,
+    "runs": true
    },
    {
     "id": "unseen_patterns-misc-4",
@@ -1859,8 +1859,8 @@
     "category": "misc",
     "valid": true,
     "no_tf": true,
-    "exact": true,
-    "similarity": 100.0,
+    "exact": false,
+    "similarity": 72.97297297297297,
     "runs": true
    },
    {
@@ -1929,8 +1929,8 @@
     "category": "real",
     "valid": true,
     "no_tf": true,
-    "exact": false,
-    "similarity": 59.75103734439834,
+    "exact": true,
+    "similarity": 100.0,
     "runs": true
    },
    {
@@ -1940,7 +1940,7 @@
     "valid": true,
     "no_tf": true,
     "exact": false,
-    "similarity": 25.222929936305732,
+    "similarity": 25.190839694656486,
     "runs": false
    },
    {
@@ -1950,7 +1950,7 @@
     "valid": true,
     "no_tf": true,
     "exact": false,
-    "similarity": 15.946843853820598,
+    "similarity": 17.293233082706767,
     "runs": null
    },
    {
@@ -1970,8 +1970,8 @@
     "valid": true,
     "no_tf": true,
     "exact": false,
-    "similarity": 76.27551020408163,
-    "runs": false
+    "similarity": 99.89701338825952,
+    "runs": true
    }
   ]
  }
