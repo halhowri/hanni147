@@ -83,7 +83,7 @@ version 1 unchanged; the model is meant for text only.
 
 - `data/` - the dataset. Not stored in this repository; run `build_dataset.py` to create it.
 - `outputs/lora/` - the trained LoRA adapter (base model: `unsloth/Qwen3.5-0.8B`)
-- `outputs/comparison.json` - every test answer from both models, with scores (version 2)
+- `outputs/comparison.json` - every test answer from both models, with scores (version 2); the test questions themselves are in `data/`, not here
 - `outputs/train_log.json` - loss history (version 2)
 - `outputs/comparison_v1.json`, `answers_tuned_v1.json`, `train_log_v1.json` - the same for version 1
 - `outputs/Modelfile` - the Ollama model definition

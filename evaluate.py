@@ -111,7 +111,8 @@ def score():
                               exact=pct([r["exact"] for r in sel]),
                               similarity=sum(r["similarity"] for r in sel) / max(len(sel), 1)))
     with open(os.path.join(OUT, "comparison.json"), "w") as f:
-        json.dump({"summary": table, "details": report, "tests": {t["id"]: t for t in tests}}, f, indent=1)
+        # scores and answers only: the test rows themselves stay in data/ (not in the repository)
+        json.dump({"summary": table, "details": report}, f, indent=1)
 
     head = f"{'group':<16}{'model':<7}{'n':>4}{'valid Python':>14}{'no TF left':>12}{'runs correctly':>16}{'exact match':>13}{'similarity':>12}"
     print(head)
