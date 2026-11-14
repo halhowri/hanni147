@@ -81,7 +81,7 @@ version 1 unchanged; the model is meant for text only.
 
 ## Files
 
-- `data/` - the dataset
+- `data/` - the dataset. Not stored in this repository; run `build_dataset.py` to create it.
 - `outputs/lora/` - the trained LoRA adapter (base model: `unsloth/Qwen3.5-0.8B`)
 - `outputs/comparison.json` - every test answer from both models, with scores (version 2)
 - `outputs/train_log.json` - loss history (version 2)
